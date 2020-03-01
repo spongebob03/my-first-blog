@@ -6,15 +6,12 @@
        <div>
            <h1><a href="">WeBareBears Blog</a></h1>
        </div>
+       {% for post in posts %}
        <div>
-           <p>published: 01.03.2020, 13:52</p>
-           <h2><a href="">My first post</a></h2>
-           <p>Grizz, Panda and IceBear's Daily Life in Sanfrancisco. Watch on Neflix</p>
+           <p>published: {{post.published_date}}</p>
+           <h1><a href="">{{post.title}}</a></h1>
+           <p>{{post.text|linebreaksbr}}</p>
        </div>
-       <div>
-           <p>published: 01.03.2020, 13:52</p>
-           <h2><a href="">My second post</a></h2>
-           <p>Episode 1. </p>
-       </div>
+       {% endfor %}
    </body>
 </html>
